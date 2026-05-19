@@ -75,7 +75,21 @@ export default function App() {
     className="h-10 md:h-12 w-auto object-contain"
   />
 </a>
-          <CTA className="hidden sm:inline-flex" ariaLabel="Falar no WhatsApp agora">Quero vender mais</CTA>
+          {/* MOBILE */}
+<CTA
+  className="inline-flex sm:hidden px-[20px] py-[12px] text-[14px]"
+  ariaLabel="Falar no WhatsApp agora"
+>
+  Quero vender mais
+</CTA>
+
+{/* DESKTOP */}
+<CTA
+  className="hidden sm:inline-flex px-[28px] py-[16px] text-[16px]"
+  ariaLabel="Falar no WhatsApp agora"
+>
+  Quero vender mais
+</CTA>
         </nav>
       </header>
 
