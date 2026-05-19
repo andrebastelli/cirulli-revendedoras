@@ -278,11 +278,24 @@ export default function App() {
       </main>
 
       <footer role="contentinfo" className="border-t border-black/5 bg-cream px-5 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-ink/70 md:flex-row">
-          <p>© {new Date().getFullYear()} Atacado Cirulli — Limeira/SP</p>
-          <p>Semijoias no atacado para revendedoras e profissionais de beleza.</p>
-        </div>
-      </footer>
+  
+  {/* LOGO CENTRALIZADA */}
+  <div className="flex justify-center mb-6">
+    <img
+      src={logoCirulli}
+      alt="Atacado Cirulli"
+      className="h-12 w-auto object-contain"
+      style={{ filter: "brightness(0)" }}
+    />
+  </div>
+
+  {/* TEXTOS (mantidos como estão) */}
+  <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-ink/70 md:flex-row">
+    <p>© {new Date().getFullYear()} Atacado Cirulli — Limeira/SP</p>
+    <p>Semijoias no atacado para revendedoras e profissionais de beleza.</p>
+  </div>
+
+</footer>
     </>
   )
 }
