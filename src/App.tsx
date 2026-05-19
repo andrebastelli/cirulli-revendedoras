@@ -75,42 +75,96 @@ export default function App() {
     className="h-10 md:h-12 w-auto object-contain"
   />
 </a>
-          <CTA className="hidden sm:inline-flex" ariaLabel="Falar no WhatsApp agora">Quero vender mais</CTA>
+          {/* MOBILE */}
+<CTA
+  className="inline-flex sm:hidden px-[14px] py-[9px] text-[12px]"
+  ariaLabel="Falar no WhatsApp agora"
+>
+  Quero vender mais
+</CTA>
+
+{/* DESKTOP */}
+<CTA
+  className="hidden sm:inline-flex px-[28px] py-[16px] text-[16px]"
+  ariaLabel="Falar no WhatsApp agora"
+>
+  Quero vender mais
+</CTA>
         </nav>
       </header>
 
       <main>
         {/* HERO */}
-        <section id="top" className="relative overflow-hidden bg-gradient-soft px-5 pt-14 pb-20 md:pt-20 md:pb-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-            <div>
-              <span className="inline-block rounded-full border border-gold/40 bg-cream px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-dark">
-                Para revendedoras e profissionais de beleza
-              </span>
-              <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] md:text-6xl">
-                Aumente seu faturamento <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">sem precisar de mais clientes</span>
-              </h1>
-              <p className="mt-5 max-w-xl text-lg text-ink/70 md:text-xl">
-                Adicione semijoias às suas vendas e multiplique seu lucro em cada pedido — com kits acessíveis no atacado.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <CTA ariaLabel="Quero vender mais com os mesmos clientes">Quero vender mais com os mesmos clientes</CTA>
-              </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/70">
-                <li>✓ Kit inicial acessível</li>
-                <li>✓ Alta margem de lucro</li>
-                <li>✓ Sem mudar sua rotina</li>
-              </ul>
-            </div>
-            <div className="relative">
-              <img src={heroImg} alt="Semijoias douradas combinadas com cosméticos sobre fundo rosé" width={1280} height={1280} fetchPriority="high" decoding="async" className="aspect-square w-full rounded-3xl object-cover shadow-gold" />
-              <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-5 py-4 shadow-soft md:block">
-                <p className="text-xs uppercase tracking-wider text-ink/60">Ticket médio</p>
-                <p className="font-display text-2xl font-extrabold bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">+ R$ 180 / venda</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section
+  id="top"
+  className="relative overflow-hidden bg-gradient-soft px-[20px] md:px-[40px] pt-[56px] md:pt-[80px] pb-[80px] md:pb-[112px]"
+>
+  <div className="mx-auto grid max-w-[1100px] items-center gap-[40px] md:gap-[48px] md:grid-cols-2">
+
+    {/* TEXTO */}
+    <div className="text-center md:text-left">
+
+      <span className="inline-block rounded-full border border-gold/40 bg-cream px-[14px] py-[6px] text-[11px] md:text-[12px] font-semibold uppercase tracking-wider text-gold-dark">
+        Para revendedoras e profissionais de beleza
+      </span>
+
+      <h1 className="mt-[20px] text-[32px] md:text-[56px] font-extrabold leading-[1.05]">
+        Aumente seu faturamento{" "}
+        <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">
+          sem precisar de mais clientes
+        </span>
+      </h1>
+
+      <p className="mt-[16px] md:mt-[20px] max-w-[520px] mx-auto md:mx-0 text-[15px] md:text-[18px] text-ink/70 leading-[1.6]">
+        Adicione semijoias às suas vendas e multiplique seu lucro em cada pedido — com kits acessíveis no atacado.
+      </p>
+
+      {/* CTA */}
+      <div className="mt-[28px] flex justify-center md:justify-start">
+        <CTA ariaLabel="Quero vender mais com os mesmos clientes">
+          Quero vender mais com os mesmos clientes
+        </CTA>
+      </div>
+
+      {/* BENEFÍCIOS */}
+      <ul className="mt-[28px] flex flex-wrap justify-center md:justify-start gap-x-[20px] gap-y-[8px] text-[13px] md:text-[14px] text-ink/70">
+        <li>✓ Kit inicial acessível</li>
+        <li>✓ Alta margem de lucro</li>
+        <li>✓ Sem mudar sua rotina</li>
+      </ul>
+
+    </div>
+
+    {/* IMAGEM */}
+    <div className="relative flex justify-center md:justify-end">
+
+      <img
+        src={heroImg}
+        alt="Semijoias douradas combinadas com cosméticos sobre fundo rosé"
+        width={1280}
+        height={1280}
+        fetchPriority="high"
+        decoding="async"
+        className="aspect-square w-full max-w-[420px] md:max-w-[520px] rounded-[24px] object-cover shadow-gold"
+      />
+
+      {/* BADGE */}
+      <div className="absolute -bottom-[16px] -left-[16px] hidden md:block rounded-[16px] bg-white px-[20px] py-[16px] shadow-soft">
+
+        <p className="text-[11px] uppercase tracking-wider text-ink/60">
+          Ticket médio
+        </p>
+
+        <p className="font-display text-[22px] font-extrabold bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">
+          + R$ 180 / venda
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
         {/* PROOF */}
         <Section className="bg-cream">
