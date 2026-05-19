@@ -3,6 +3,7 @@ import heroImg from '@/assets/hero-semijoias.jpg'
 import revendedoraImg from '@/assets/revendedora.jpg'
 import pecasImg from '@/assets/pecas-close.jpg'
 import kitImg from '@/assets/kit-semijoias.jpg'
+import logoCirulli from "@/assets/logo-cirulli.png";
 
 const WHATS = import.meta.env.VITE_WHATSAPP_NUMBER || '5519999999999'
 const MSG = 'Já vendo cosméticos/atendo clientes e quero aumentar meu lucro com semijoias.'
@@ -67,9 +68,14 @@ export default function App() {
 
       <header className="sticky top-0 z-30 border-b border-black/5 bg-cream/85 backdrop-blur" role="banner">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Principal">
-          <a href="#top" className="font-display text-lg font-extrabold tracking-tight">
-            Atacado <span className="text-gradient-gold">Cirulli</span>
-          </a>
+          <a href="#top" className="flex items-center">
+  <img
+    src={logoCirulli}
+    alt="Atacado Cirulli"
+    className="h-10 md:h-12 w-auto object-contain"
+    style={{ filter: "brightness(0)" }}
+  />
+</a>
           <CTA className="hidden sm:inline-flex" ariaLabel="Falar no WhatsApp agora">Quero vender mais</CTA>
         </nav>
       </header>
