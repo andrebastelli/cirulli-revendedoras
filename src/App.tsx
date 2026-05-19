@@ -77,7 +77,7 @@ export default function App() {
 </a>
           {/* MOBILE */}
 <CTA
-  className="inline-flex sm:hidden px-[20px] py-[12px] text-[14px]"
+  className="inline-flex sm:hidden px-[14px] py-[9px] text-[12px]"
   ariaLabel="Falar no WhatsApp agora"
 >
   Quero vender mais
