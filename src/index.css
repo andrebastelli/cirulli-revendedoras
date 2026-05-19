@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    color: #2a221a;
+    background: #fbf7f0;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { letter-spacing: -0.02em; font-family: 'Montserrat', sans-serif; }
+  :focus-visible {
+    outline: 2px solid #9a7a2e;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background-image: linear-gradient(135deg, #e6c878 0%, #9a7a2e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
