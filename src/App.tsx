@@ -106,7 +106,7 @@ export default function App() {
               <img src={heroImg} alt="Semijoias douradas combinadas com cosméticos sobre fundo rosé" width={1280} height={1280} fetchPriority="high" decoding="async" className="aspect-square w-full rounded-3xl object-cover shadow-gold" />
               <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-5 py-4 shadow-soft md:block">
                 <p className="text-xs uppercase tracking-wider text-ink/60">Ticket médio</p>
-                <p className="font-display text-2xl font-extrabold text-gradient-gold">+ R$ 180 / venda</p>
+                <p className="font-display text-2xl font-extrabold bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">+ R$ 180 / venda</p>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function App() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">O problema invisível</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight md:text-5xl">
-                Você vende todo dia.<br /><span className="text-gradient-gold">Mas ganha pouco por cliente.</span>
+                Você vende todo dia.<br /><span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">Mas ganha pouco por cliente.</span>
               </h2>
               <ul className="mt-6 space-y-4 text-lg text-ink/70">
                 <li>• Seu esforço cresce, o lucro não acompanha</li>
@@ -160,7 +160,7 @@ export default function App() {
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">A solução é simples</p>
             <h2 className="mt-3 font-display text-3xl font-bold md:text-5xl">
-              Venda combinada: <span className="text-gradient-gold">cosmético + semijoia</span>
+              Venda combinada: <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">cosmético + semijoia</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-ink/70">
               Sua cliente já está comprando. Você só apresenta a peça certa, no momento certo — e o pedido cresce naturalmente.
@@ -173,7 +173,7 @@ export default function App() {
               { n: '03', t: 'Lucre mais na mesma venda', d: 'Cliente combina, leva os dois, e você fatura o dobro.' },
             ].map((s) => (
               <article key={s.n} className="rounded-2xl border border-black/5 bg-white p-7 shadow-soft">
-                <div className="font-display text-4xl font-extrabold text-gradient-gold">{s.n}</div>
+                <div className="font-display text-4xl font-extrabold bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">{s.n}</div>
                 <h3 className="mt-3 text-xl font-bold">{s.t}</h3>
                 <p className="mt-2 text-ink/70">{s.d}</p>
               </article>
@@ -187,7 +187,7 @@ export default function App() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">Por que funciona</p>
               <h2 className="mt-3 font-display text-3xl font-bold md:text-5xl">
-                Lucro maior, <span className="text-gradient-gold">sem trabalhar mais.</span>
+                Lucro maior, <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">sem trabalhar mais.</span>
               </h2>
               <div className="mt-8 grid gap-4">
                 {[
@@ -218,7 +218,7 @@ export default function App() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">A oferta</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight md:text-5xl">
-                Comece com um kit <span className="text-gradient-gold">e fature já no primeiro mês.</span>
+                Comece com um kit <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">e fature já no primeiro mês.</span>
               </h2>
               <ul className="mt-6 space-y-3 text-lg">
                 <li className="flex gap-3"><span className="text-gold-dark">✓</span> Kit inicial acessível</li>
@@ -284,7 +284,6 @@ export default function App() {
       src={logoCirulli}
       alt="Atacado Cirulli"
       className="h-12 w-auto object-contain"
-      style={{ filter: "brightness(0)" }}
     />
   </div>
 
