@@ -232,7 +232,7 @@ export default function App() {
         </Section>
 
         {/* FAQ */}
-        <Section>
+        <Section className="bg-[linear-gradient(180deg,#f7fcfd_0%,#dff5f8_50%,#c7eef2_100%)]">
           <div className="mx-auto max-w-3xl">
             <div className="text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">Dúvidas frequentes</p>
