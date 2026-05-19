@@ -137,7 +137,7 @@ export default function App() {
         </Section>
 
         {/* PROBLEM */}
-        <Section>
+        <Section className="bg-[linear-gradient(180deg,#f7fcfd_0%,#dff5f8_50%,#c7eef2_100%)]">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <img src={revendedoraImg} alt="Revendedora apresentando colar dourado para cliente" width={1024} height={1024} loading="lazy" decoding="async" className="aspect-square w-full rounded-3xl object-cover shadow-soft" />
             <div>
