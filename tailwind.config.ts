@@ -9,17 +9,20 @@ export default {
         sans: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
-        gold: {
-          DEFAULT: '#00aec2',
-          dark: '#008fa0',
-          light: '#5fd3df',
-        },
+  gold: {
+    DEFAULT: '#00aec2',
+    dark: '#007c8a',
+    light: '#67d9e5',
+  },
 
-        rose: '#e8c8c0',
-        nude: '#f1e6d8',
-        cream: '#fbf7f0',
-        ink: '#2a221a',
-      },
+  // tons derivados do azul principal
+  rose: '#c7eef2', // tom claro suave
+  nude: '#e8f8fa', // fundo bem claro
+  cream: '#f7fcfd', // quase branco azulado
+
+  // texto principal
+  ink: '#12343a', // azul petróleo escuro
+},
 
       backgroundImage: {
         'gradient-gold':
