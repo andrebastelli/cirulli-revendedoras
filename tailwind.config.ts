@@ -25,18 +25,18 @@ export default {
 },
 
       backgroundImage: {
-        'gradient-gold':
-          'linear-gradient(135deg, #5fd3df 0%, #008fa0 100%)',
+  'gradient-gold':
+    'linear-gradient(135deg, #67d9e5 0%, #007c8a 100%)',
 
-        'gradient-soft':
-          'linear-gradient(180deg, #fbf7f0 0%, #f1e0d4 100%)',
-      },
+  'gradient-soft':
+    'linear-gradient(180deg, #f7fcfd 0%, #dff5f8 100%)',
+},
 
-      boxShadow: {
-        soft: '0 10px 30px -12px rgba(0,174,194,0.18)',
+boxShadow: {
+  soft: '0 10px 30px -12px rgba(0, 174, 194, 0.18)',
 
-        gold: '0 12px 32px -10px rgba(0,174,194,0.45)',
-      },
+  gold: '0 12px 32px -10px rgba(0, 174, 194, 0.40)',
+},
     },
   },
   plugins: [],
