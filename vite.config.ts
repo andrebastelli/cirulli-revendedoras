@@ -8,12 +8,4 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  server: {
-    middlewareMode: true,
-    hmr: {
-      host: 'localhost',
-      port: 5173,
-      protocol: 'ws',
-    },
-  },
 })
