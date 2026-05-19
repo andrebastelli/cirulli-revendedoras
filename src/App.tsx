@@ -73,7 +73,6 @@ export default function App() {
     src={logoCirulli}
     alt="Atacado Cirulli"
     className="h-10 md:h-12 w-auto object-contain"
-    style={{ filter: "brightness(0)" }}
   />
 </a>
           <CTA className="hidden sm:inline-flex" ariaLabel="Falar no WhatsApp agora">Quero vender mais</CTA>
