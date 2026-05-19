@@ -26,7 +26,7 @@ export default {
 
       backgroundImage: {
   'gradient-gold':
-    'linear-gradient(135deg, #67d9e5 0%, #007c8a 100%)',
+    'linear-gradient(135deg, #67d9e5 0%, #00aec2 50%, #007c8a 100%)',
 
   'gradient-soft':
     'linear-gradient(180deg, #f7fcfd 0%, #dff5f8 100%)',
