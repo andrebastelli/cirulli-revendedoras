@@ -88,7 +88,7 @@ export default function App() {
                 Para revendedoras e profissionais de beleza
               </span>
               <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] md:text-6xl">
-                Aumente seu faturamento <span className="text-gradient-gold">sem precisar de mais clientes</span>
+                Aumente seu faturamento <span className="bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">sem precisar de mais clientes</span>
               </h1>
               <p className="mt-5 max-w-xl text-lg text-ink/70 md:text-xl">
                 Adicione semijoias às suas vendas e multiplique seu lucro em cada pedido — com kits acessíveis no atacado.
