@@ -77,7 +77,7 @@ export default function App() {
 </a>
           {/* MOBILE */}
 <CTA
-  className="inline-flex sm:hidden px-[14px] py-[9px] text-[12px]"
+  className="inline-flex sm:hidden px-[14px] py-[9px] text-[10px]"
   ariaLabel="Falar no WhatsApp agora"
 >
   Quero vender mais
@@ -122,7 +122,7 @@ export default function App() {
       {/* CTA */}
       <div className="mt-[28px] flex justify-center md:justify-start">
         <CTA ariaLabel="Quero vender mais com os mesmos clientes">
-          Quero vender mais com os mesmos clientes
+          Quero vender mais
         </CTA>
       </div>
 
@@ -181,56 +181,125 @@ export default function App() {
   </div>
 
   {/* CARDS */}
-  <div className="mt-[40px] md:mt-[56px] grid gap-[16px] md:gap-[24px] md:grid-cols-3">
+<div className="mt-[40px] md:mt-[56px] grid gap-[16px] md:gap-[24px] md:grid-cols-3">
+  {[
+    {
+      quote:
+        "Vendi um batom e ofereci um colar. Saíram os dois. Meu ticket dobrou em um mês.",
+      name: "Ana — Revendedora Avon",
+      metric: "+92% no ticket médio",
+    },
+    {
+      quote:
+        "Coloquei as peças no balcão do salão. As clientes pedem antes mesmo de eu mostrar.",
+      name: "Júlia — Cabeleireira",
+      metric: "8 peças vendidas / semana",
+    },
+    {
+      quote:
+        "Foi a coisa mais fácil que já vendi. Lucro maior que cosmético, sem dor de cabeça.",
+      name: "Patrícia — Consultora",
+      metric: "Margem 3x maior",
+    },
+  ].map((t) => (
+    <figure
+      key={t.name}
+      className="
+        group relative overflow-hidden
+        rounded-[22px]
+        border border-black/5
+        bg-white
+        p-[22px] md:p-[28px]
+        shadow-[0_18px_45px_rgba(0,0,0,0.08)]
+        transition-all duration-300
 
-    {[
-      {
-        quote:
-          'Vendi um batom e ofereci um colar. Saíram os dois. Meu ticket dobrou em um mês.',
-        name: 'Ana — Revendedora Avon',
-        metric: '+92% no ticket médio',
-      },
-      {
-        quote:
-          'Coloquei as peças no balcão do salão. As clientes pedem antes mesmo de eu mostrar.',
-        name: 'Júlia — Cabeleireira',
-        metric: '8 peças vendidas / semana',
-      },
-      {
-        quote:
-          'Foi a coisa mais fácil que já vendi. Lucro maior que cosmético, sem dor de cabeça.',
-        name: 'Patrícia — Consultora',
-        metric: 'Margem 3x maior',
-      },
-    ].map((t) => (
-      <figure
-        key={t.name}
-        className="rounded-[18px] border border-black/5 bg-white p-[20px] md:p-[28px] shadow-soft"
+        hover:translate-y-[-4px]
+        hover:border-gold/30
+        hover:shadow-[0_24px_60px_rgba(0,0,0,0.14)]
+      "
+    >
+      {/* glow decorativo */}
+      <div
+        className="
+          pointer-events-none absolute -right-[50px] -top-[50px]
+          h-[130px] w-[130px] rounded-full
+          bg-gold/10 blur-3xl
+          opacity-0 transition-opacity duration-300
+          group-hover:opacity-100
+        "
+      />
+
+      {/* aspas */}
+      <div
+        aria-hidden="true"
+        className="
+          absolute right-[18px] top-[12px]
+          text-[58px] md:text-[72px]
+          font-serif leading-none
+          text-gold/10
+          transition-all duration-300
+          group-hover:text-gold/20
+        "
       >
-        {/* STARS */}
-        <div aria-hidden="true" className="text-[18px] md:text-[20px] text-gold">
-          ★★★★★
+        ”
+      </div>
+
+      {/* stars */}
+      <div
+        aria-hidden="true"
+        className="
+          relative flex items-center gap-[2px]
+          text-[15px] md:text-[17px]
+          text-gold
+        "
+      >
+        ★★★★★
+      </div>
+
+      {/* quote */}
+      <blockquote
+        className="
+          relative mt-[14px]
+          text-[14px] md:text-[16px]
+          leading-[1.65]
+          text-ink/80
+        "
+      >
+        “{t.quote}”
+      </blockquote>
+
+      {/* footer */}
+      <figcaption
+        className="
+          relative mt-[22px]
+          border-t border-black/5
+          pt-[16px]
+        "
+      >
+        <p className="text-[14px] md:text-[15px] font-semibold text-ink">
+          {t.name}
+        </p>
+
+        <div
+          className="
+            mt-[10px] inline-flex items-center
+            rounded-full
+            bg-gold/10
+            px-[12px] py-[6px]
+            text-[11px] md:text-[12px]
+            font-bold uppercase tracking-[1px]
+            text-gold-dark
+            transition-all duration-300
+            group-hover:bg-gold
+            group-hover:text-ink
+          "
+        >
+          {t.metric}
         </div>
-
-        {/* QUOTE */}
-        <blockquote className="mt-[12px] text-[14px] md:text-[16px] leading-[1.6]">
-          "{t.quote}"
-        </blockquote>
-
-        {/* FOOTER */}
-        <figcaption className="mt-[20px] border-t border-black/5 pt-[14px]">
-          <p className="font-semibold text-[14px] md:text-[15px]">
-            {t.name}
-          </p>
-
-          <p className="text-[12px] md:text-[14px] text-gold-dark">
-            {t.metric}
-          </p>
-        </figcaption>
-      </figure>
-    ))}
-
-  </div>
+      </figcaption>
+    </figure>
+  ))}
+</div>
 </Section>
 
         {/* PROBLEMA */}
@@ -303,49 +372,111 @@ export default function App() {
   </div>
 
   {/* CARDS */}
-  <div className="mt-[40px] md:mt-[56px] grid gap-[16px] md:gap-[24px] md:grid-cols-3">
+<div className="mt-[40px] md:mt-[56px] grid gap-[16px] md:gap-[24px] md:grid-cols-3">
+  {[
+    {
+      n: "01",
+      t: "Escolha seu kit",
+      d: "Receba peças prontas pra vender, selecionadas para alta aceitação.",
+    },
+    {
+      n: "02",
+      t: "Mostre junto",
+      d: "No catálogo, no WhatsApp, no salão. Onde sua cliente já compra.",
+    },
+    {
+      n: "03",
+      t: "Lucre mais na mesma venda",
+      d: "Cliente combina, leva os dois, e você fatura o dobro.",
+    },
+  ].map((s) => (
+    <article
+      key={s.n}
+      className="
+        group relative overflow-hidden
+        rounded-[22px]
+        border border-black/5
+        bg-white
+        p-[22px] md:p-[28px]
+        text-left
+        shadow-[0_18px_45px_rgba(0,0,0,0.08)]
+        transition-all duration-300
 
-    {[
-      {
-        n: '01',
-        t: 'Escolha seu kit',
-        d: 'Receba peças prontas pra vender, selecionadas para alta aceitação.',
-      },
-      {
-        n: '02',
-        t: 'Mostre junto',
-        d: 'No catálogo, no WhatsApp, no salão. Onde sua cliente já compra.',
-      },
-      {
-        n: '03',
-        t: 'Lucre mais na mesma venda',
-        d: 'Cliente combina, leva os dois, e você fatura o dobro.',
-      },
-    ].map((s) => (
-      <article
-        key={s.n}
-        className="rounded-[18px] border border-black/5 bg-white p-[20px] md:p-[28px] shadow-soft text-center md:text-left"
+        hover:translate-y-[-4px]
+        hover:border-[#00aec2]/30
+        hover:shadow-[0_24px_60px_rgba(0,0,0,0.14)]
+      "
+    >
+      {/* brilho decorativo */}
+      <div
+        className="
+          pointer-events-none absolute -right-[50px] -top-[50px]
+          h-[140px] w-[140px] rounded-full
+          bg-[#00aec2]/10 blur-3xl
+          opacity-0 transition-opacity duration-300
+          group-hover:opacity-100
+        "
+      />
+
+      {/* número */}
+      <div
+        className="
+          relative flex h-[54px] w-[54px]
+          items-center justify-center
+          rounded-[16px]
+          bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)]
+          text-[17px] font-extrabold text-white
+          shadow-[0_10px_25px_rgba(0,174,194,0.28)]
+          transition-all duration-300
+
+          md:h-[60px] md:w-[60px] md:text-[19px]
+
+          group-hover:scale-[1.05]
+          group-hover:shadow-[0_14px_35px_rgba(0,174,194,0.38)]
+        "
       >
+        {s.n}
+      </div>
 
-        {/* NÚMEROS */}
-        <div className="font-display text-[32px] md:text-[40px] font-extrabold bg-[linear-gradient(135deg,#67d9e5_0%,#00aec2_50%,#007c8a_100%)] bg-clip-text text-transparent">
-          {s.n}
-        </div>
+      {/* linha */}
+      <div className="mt-[22px] h-[2px] w-[38px] rounded-full bg-[#00aec2]/35 transition-all duration-300 group-hover:w-[72px]" />
 
-        {/* TÍTULO */}
-        <h3 className="mt-[12px] text-[18px] md:text-[20px] font-bold">
-          {s.t}
-        </h3>
+      {/* título */}
+      <h3
+        className="
+          relative mt-[18px]
+          text-[18px] md:text-[21px]
+          font-bold leading-[1.25]
+          text-ink
+        "
+      >
+        {s.t}
+      </h3>
 
-        {/* DESCRIÇÃO */}
-        <p className="mt-[8px] text-[14px] md:text-[16px] text-ink/70 leading-[1.6]">
-          {s.d}
-        </p>
+      {/* descrição */}
+      <p
+        className="
+          relative mt-[10px]
+          text-[14px] md:text-[16px]
+          leading-[1.65]
+          text-ink/70
+        "
+      >
+        {s.d}
+      </p>
 
-      </article>
-    ))}
-
-  </div>
+      {/* detalhe inferior */}
+      <div
+        className="
+          absolute bottom-0 left-0 h-[3px] w-0
+          bg-[linear-gradient(90deg,#67d9e5,#00aec2,#007c8a)]
+          transition-all duration-300
+          group-hover:w-full
+        "
+      />
+    </article>
+  ))}
+</div>
 </Section>
 
         {/* BENEFÍCIOS */}
@@ -368,39 +499,78 @@ export default function App() {
       </h2>
 
       {/* LISTA */}
-      <div className="mt-[24px] md:mt-[32px] grid gap-[12px] md:gap-[16px]">
+<div className="mt-[24px] md:mt-[32px] grid gap-[12px] md:gap-[16px]">
+  {[
+    ["Ticket médio maior", "Cada pedido vale mais — sem prospectar cliente novo."],
+    ["Margem alta", "Semijoia lucra mais que cosmético, por peça."],
+    ["Venda fácil", "Produto complementar — a cliente já está no clima de comprar."],
+    ["Rotatividade rápida", "Peças que saem o ano inteiro, em qualquer ocasião."],
+    ["Você vira referência", "Deixa de ser só revendedora — vira consultora completa."],
+  ].map(([t, d], i) => (
+    <div
+      key={t}
+      className="
+        group relative flex gap-[14px] md:gap-[16px]
+        rounded-[18px]
+        border border-black/5
+        bg-cream
+        p-[16px] md:p-[18px]
+        shadow-[0_10px_28px_rgba(0,0,0,0.06)]
+        transition-all duration-300
 
-        {[
-          ['Ticket médio maior', 'Cada pedido vale mais — sem prospectar cliente novo.'],
-          ['Margem alta', 'Semijoia lucra mais que cosmético, por peça.'],
-          ['Venda fácil', 'Produto complementar — a cliente já está no clima de comprar.'],
-          ['Rotatividade rápida', 'Peças que saem o ano inteiro, em qualquer ocasião.'],
-          ['Você vira referência', 'Deixa de ser só revendedora — vira consultora completa.'],
-        ].map(([t, d]) => (
-          <div
-            key={t}
-            className="flex gap-[12px] md:gap-[16px] rounded-[14px] bg-cream p-[14px] md:p-[16px]"
-          >
+        hover:translate-y-[-2px]
+        hover:border-gold/30
+        hover:bg-white
+        hover:shadow-[0_18px_42px_rgba(0,0,0,0.12)]
+      "
+    >
+      {/* indicador */}
+      <div
+        aria-hidden="true"
+        className="
+          mt-[2px] flex h-[34px] w-[34px] shrink-0
+          items-center justify-center rounded-full
+          bg-gold/12
+          text-[12px] font-bold text-gold-dark
+          ring-1 ring-gold/20
+          transition-all duration-300
 
-            <div
-              aria-hidden="true"
-              className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-gold"
-            />
+          md:h-[38px] md:w-[38px]
 
-            <div>
-              <p className="text-[14px] md:text-[16px] font-semibold">
-                {t}
-              </p>
-
-              <p className="text-[13px] md:text-[15px] text-ink/70 leading-[1.5]">
-                {d}
-              </p>
-            </div>
-
-          </div>
-        ))}
-
+          group-hover:bg-gold
+          group-hover:text-ink
+          group-hover:ring-gold/40
+        "
+      >
+        {String(i + 1).padStart(2, "0")}
       </div>
+
+      {/* conteúdo */}
+      <div className="min-w-0 flex-1">
+        <p
+          className="
+            text-[15px] md:text-[17px]
+            font-bold leading-[1.25]
+            text-ink
+          "
+        >
+          {t}
+        </p>
+
+        <p
+          className="
+            mt-[5px]
+            text-[13px] md:text-[15px]
+            leading-[1.55]
+            text-ink/70
+          "
+        >
+          {d}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
 
     </div>
 
@@ -484,7 +654,7 @@ export default function App() {
       {/* CTA */}
       <div className="mt-[28px] md:mt-[32px] flex justify-center md:justify-start">
         <CTA ariaLabel="Quero meu kit no WhatsApp">
-          Quero meu kit agora
+          Quero meu kit
         </CTA>
       </div>
 
@@ -512,58 +682,128 @@ export default function App() {
     </div>
 
     {/* ACCORDION */}
-    <div className="mt-[32px] md:mt-[48px] divide-y divide-black/5 rounded-[18px] border border-black/5 bg-white">
+<div className="mt-[32px] md:mt-[48px] grid gap-[12px] md:gap-[14px]">
+  {[
+    {
+      q: "Preciso aprender a vender semijoias?",
+      a: "Não. Você já sabe vender — semijoia é só um complemento. A peça quase se vende sozinha quando aparece no momento certo da venda.",
+    },
+    {
+      q: "Minhas clientes vão comprar mesmo?",
+      a: "Sim. A maioria das mulheres já compra semijoias em algum lugar. Estando na sua mão, com a confiança que ela já tem em você, a venda é natural.",
+    },
+    {
+      q: "Quanto de lucro posso ter?",
+      a: "A margem em semijoia é, em média, maior que em cosmético. Muitas revendedoras dobram o lucro por pedido já no primeiro mês.",
+    },
+    {
+      q: "Como mostro as peças sem complicar?",
+      a: "WhatsApp, foto no status, peça exposta no salão, ou junto do catálogo. Sem loja, sem site, sem rotina nova.",
+    },
+    {
+      q: "Não tenho muito dinheiro pra investir.",
+      a: "Por isso oferecemos kits iniciais acessíveis e parcelados — você começa pequeno e gira o investimento rápido.",
+    },
+  ].map((f, i) => (
+    <details
+      key={f.q}
+      className="
+        group overflow-hidden
+        rounded-[18px]
+        border border-black/5
+        bg-white
+        shadow-[0_12px_32px_rgba(0,0,0,0.06)]
+        transition-all duration-300
 
-      {[
-        {
-          q: 'Preciso aprender a vender semijoias?',
-          a: 'Não. Você já sabe vender — semijoia é só um complemento. A peça quase se vende sozinha quando aparece no momento certo da venda.',
-        },
-        {
-          q: 'Minhas clientes vão comprar mesmo?',
-          a: 'Sim. A maioria das mulheres já compra semijoias em algum lugar. Estando na sua mão, com a confiança que ela já tem em você, a venda é natural.',
-        },
-        {
-          q: 'Quanto de lucro posso ter?',
-          a: 'A margem em semijoia é, em média, maior que em cosmético. Muitas revendedoras dobram o lucro por pedido já no primeiro mês.',
-        },
-        {
-          q: 'Como mostro as peças sem complicar?',
-          a: 'WhatsApp, foto no status, peça exposta no salão, ou junto do catálogo. Sem loja, sem site, sem rotina nova.',
-        },
-        {
-          q: 'Não tenho muito dinheiro pra investir.',
-          a: 'Por isso oferecemos kits iniciais acessíveis e parcelados — você começa pequeno e gira o investimento rápido.',
-        },
-      ].map((f) => (
-        <details
-          key={f.q}
-          className="group px-[16px] md:px-[24px] py-[14px] md:py-[18px]"
+        open:border-gold/30
+        open:shadow-[0_18px_46px_rgba(0,0,0,0.10)]
+
+        hover:border-gold/25
+        hover:shadow-[0_16px_40px_rgba(0,0,0,0.09)]
+      "
+    >
+      {/* QUESTION */}
+      <summary
+        className="
+          flex cursor-pointer list-none items-center justify-between
+          gap-[14px]
+          px-[16px] py-[16px]
+          md:px-[22px] md:py-[20px]
+        "
+      >
+        <div className="flex items-center gap-[12px] md:gap-[14px]">
+          {/* número */}
+          <span
+            className="
+              flex h-[34px] w-[34px] shrink-0 items-center justify-center
+              rounded-full bg-gold/10
+              text-[11px] font-bold text-gold-dark
+              ring-1 ring-gold/20
+              transition-all duration-300
+
+              md:h-[38px] md:w-[38px]
+
+              group-open:bg-gold
+              group-open:text-ink
+            "
+          >
+            {String(i + 1).padStart(2, "0")}
+          </span>
+
+          <span
+            className="
+              text-left
+              text-[14px] md:text-[17px]
+              font-bold leading-[1.35]
+              text-ink
+            "
+          >
+            {f.q}
+          </span>
+        </div>
+
+        {/* ícone */}
+        <span
+          aria-hidden="true"
+          className="
+            flex h-[30px] w-[30px] shrink-0 items-center justify-center
+            rounded-full border border-black/5 bg-cream
+            text-[20px] leading-none text-gold-dark
+            transition-all duration-300
+
+            md:h-[34px] md:w-[34px]
+
+            group-open:rotate-45
+            group-open:bg-gold
+            group-open:text-ink
+          "
         >
+          +
+        </span>
+      </summary>
 
-          {/* QUESTION */}
-          <summary className="flex cursor-pointer items-center justify-between gap-[12px] text-[14px] md:text-[16px] font-semibold leading-[1.4] list-none">
-
-            <span className="text-left">{f.q}</span>
-
-            <span
-              aria-hidden="true"
-              className="text-gold-dark text-[18px] md:text-[20px] transition-transform group-open:rotate-45"
-            >
-              +
-            </span>
-
-          </summary>
-
-          {/* ANSWER */}
-          <p className="mt-[10px] md:mt-[12px] text-[13px] md:text-[15px] text-ink/70 leading-[1.6]">
-            {f.a}
-          </p>
-
-        </details>
-      ))}
-
-    </div>
+      {/* ANSWER */}
+      <div
+        className="
+          px-[16px] pb-[18px] pl-[62px]
+          md:px-[22px] md:pb-[22px] md:pl-[74px]
+        "
+      >
+        <p
+          className="
+            border-t border-black/5
+            pt-[12px]
+            text-[13px] md:text-[15px]
+            leading-[1.65]
+            text-ink/70
+          "
+        >
+          {f.a}
+        </p>
+      </div>
+    </details>
+  ))}
+</div>
 
   </div>
 </Section>
@@ -586,35 +826,83 @@ export default function App() {
     </p>
 
     {/* CTA */}
-    <div className="mt-[28px] md:mt-[36px] flex justify-center">
+<div className="mt-[28px] md:mt-[36px] flex justify-center">
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Começar a aumentar meu faturamento"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden
+      gap-[12px]
 
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Começar a aumentar meu faturamento"
-        className="
-          inline-flex
-          items-center
-          justify-center
-          gap-[10px]
-          px-[22px] md:px-[32px]
-          py-[12px] md:py-[16px]
-          rounded-full
-          bg-white
-          text-black
-          font-bold
-          text-[14px] md:text-[16px]
-          shadow-soft
-          transition-all
-          hover:-translate-y-0.5
-        "
-      >
-        Começar a aumentar meu faturamento
-        <span aria-hidden="true">→</span>
-      </a>
+      rounded-[18px]
+      border border-white/60
+      bg-[linear-gradient(135deg,#ffffff_0%,#f7f7f7_100%)]
 
-    </div>
+      px-[24px] py-[14px]
+      text-[14px] font-extrabold
+      text-black
+
+      md:px-[36px] md:py-[18px]
+      md:text-[17px]
+
+      shadow-[0_18px_50px_rgba(0,0,0,0.28)]
+      transition-all duration-300
+
+      hover:translate-y-[-3px]
+      hover:scale-[1.02]
+      hover:shadow-[0_26px_70px_rgba(0,0,0,0.38)]
+    "
+  >
+    {/* brilho passando */}
+    <span
+      aria-hidden="true"
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/80 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+
+    {/* detalhe superior */}
+    <span
+      aria-hidden="true"
+      className="
+        pointer-events-none absolute left-[14px] right-[14px] top-[6px]
+        h-[1px] rounded-full bg-white/90
+      "
+    />
+
+    <span className="relative z-10">
+      Começar a aumentar meu faturamento
+    </span>
+
+    <span
+      aria-hidden="true"
+      className="
+        relative z-10 flex h-[32px] w-[32px] shrink-0
+        items-center justify-center
+        rounded-full
+        bg-[#00aec2]
+        text-[16px] text-white
+        shadow-[0_8px_18px_rgba(0,174,194,0.35)]
+        transition-all duration-300
+
+        md:h-[36px] md:w-[36px]
+        md:text-[18px]
+
+        group-hover:translate-x-[5px]
+        group-hover:bg-black
+        group-hover:shadow-[0_10px_24px_rgba(0,0,0,0.35)]
+      "
+    >
+      →
+    </span>
+  </a>
+</div>
 
   </div>
 </Section>
